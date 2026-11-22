@@ -1,0 +1,34 @@
+# Pinned Python Dependencies for CenterPoint-KITTI
+# Target compatibility: Python 3.8 (or 3.7) with PyTorch 1.10.1 + CUDA 11.3 / CUDA 11.1
+# Note: PyTorch and torchvision are installed from the PyTorch wheel repository:
+# --extra-index-url https://download.pytorch.org/whl/cu113
+
+torch==1.10.1+cu113
+torchvision==0.11.2+cu113
+
+# Core numerical dependencies pinned to prevent np.int/np.bool removal (NumPy >= 1.24 break)
+numpy==1.21.6
+numba==0.54.1
+llvmlite==0.37.0
+
+# OpenPCDet required packages
+# pyyaml pinned < 6.0 due to yaml.load() call in pcdet/datasets/kitti/kitti_dataset.py
+pyyaml==5.4.1
+easydict==1.9
+tensorboardX==2.5.1
+scikit-image==0.19.3
+tqdm==4.64.1
+
+# 3D Data Processing and Visualization
+open3d==0.15.2
+matplotlib==3.5.3
+pandas==1.3.5
+scipy==1.7.3
+pillow==9.4.0
+shapely==1.8.5.post1
+
+# Build and C++ Extension compilation tools
+setuptools==59.5.0
+wheel==0.38.4
+ninja==1.10.2.4
+cmake==3.25.0
